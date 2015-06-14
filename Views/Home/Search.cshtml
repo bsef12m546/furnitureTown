@@ -1,0 +1,28 @@
+﻿@using PROJECT.Models
+@{
+    ViewBag.Title = "Search";
+
+    Layout = "~/Views/Shared/category_share.cshtml";
+}
+
+
+<h1 style="font-family: 'Segoe UI'; color: #713a05; ">PROUDUCTS</h1>
+
+@foreach (product p in Model)
+{
+    <div class="col-sm-4 col-lg-4 col-md-4">
+        <div class="thumbnail">
+            <img src="~/Files/@p.image" alt="">
+            <div class="caption">
+                <h4 class="pull-right">RS: @p.price</h4>
+                <h4>
+                    @p.name
+                </h4>
+                <br />
+                <h4><a class="shopBtn" href="/Home/detail/@p.Id" title="add to cart"> Make order </a></h4>
+                <br />
+                <p> </p>
+            </div>
+        </div>
+    </div>
+}
