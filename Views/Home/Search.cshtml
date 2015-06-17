@@ -10,9 +10,10 @@
 
 @foreach (product p in Model)
 {
+    string url = "~/images/" + p.Id + "_0.jpg";
     <div class="col-sm-4 col-lg-4 col-md-4">
         <div class="thumbnail">
-            <img src="~/Files/@p.image" alt="">
+            <img src=@Url.Content(url) alt="">
             <div class="caption">
                 <h4 class="pull-right">RS: @p.price</h4>
                 <h4>
